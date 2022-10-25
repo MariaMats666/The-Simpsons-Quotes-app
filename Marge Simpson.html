@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="MyStyleSheet.css">
+  <title>Marge Simpson</title>
+</head>
+<body class="Main" >
+  <div class="center">
+  <h1 class="font" >Marge Simpson</h1>
+  <img src="/css/Marge Simpson.jpg" width="40%" style="margin-top:2rem">
+  <div class="form">
+    <div class="highlight" id="quoteDisplay" class="text">
+    </div>
+    <div style="margin-top:2rem"></div>
+    <button  class="searchbtn" onclick="newQuote()">New Quote</button>
+    <script src="javascript.js"></script>
+  <script>
+    var quotes=[
+  'I don’t want to alarm anybody, but I think there’s a little al-key-hol in this punch."',
+  "I’m a married woman. Please don’t call me that!",
+  '"How are you enjoying your ham, Homey?"',
+  '"Homer, for the last time. I’m not putting that in."',
+  "An alligator with sunglasses? Now I’ve seen everything.",
+  '"GET! OUT"',
+  "I hope you understand I’m too tense to pretend I like you.",
+  '"You should listen to your heart, and not the voices inside your head."',
+  '"Hello, room service? This is Marge Simpson! I’d like a banana fudge sundae. With whipped    cream! And some chocolate chip cheesecake. And a bottle of tequila!"',
+  '"Mmm~mmmmm"',
+  "“You have no idea what its like, being married to you”",
+  "“I don't think that's a very good idea.”",
+  '"Oh, Homie.!"',
+  "“Don't you think the parts that aren't evil, are a little...pretentious.”",
+  '“What did I say about pointing out the meaninglessness of things?”',
+  '“I’m going into the dining room to have a conversation. Anyone who wants to join me is welcome. Hello Marge, how’s the family? I don’t want to talk about it! Mind your own business”',
+]
+function newQuote(){
+var randomNumber = Math.floor(Math.random() * (quotes.length));
+
+document.getElementById('quoteDisplay').innerHTML= quotes[randomNumber];
+}
+
+  </script>
+
+</div>
+
+</body>
+</html>

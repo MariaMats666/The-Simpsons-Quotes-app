@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link>
+<title>The Simpsons Quotes App</title>
+<script src="https://kit.fontawesome.com/15c37683ba.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Yellowtail&display=swap" rel="stylesheet"> 
+<link href="MyStyleSheet.css" rel="stylesheet" type="text/css"> 			   
+</head>
+<body>
+
+<h1 class="Main Heading"id="font">The Simpsons Quotes</h1>
+
+<img src="/css/Simpsons_FamilyPicture.png">
+<div class="wrapper">
+		<div id="select">
+			<p id="selectText"> All Characters</p>
+			<img src="/css/drop down arrow.png">
+			<ul id="list"my-selected-url>
+				<li class="options"my-url="Homer Simpson.html">Homer Simpson</li>
+				<li class="options"my-url="Bart Simpson.html">Bart Simpson</li>
+				<li class="options"my-url="Marge Simpson.html">Marge Simpson</li>
+				<li class="options" my-url="Lisa Simpson.html">Lisa Simpson</li>
+			</ul>
+		</div>
+	<input type="text" class="input" id="inputfield" placeholder="Who's Quotes would you like to see?">
+	<div class="searchbtn"id="searchbtn">
+		<i class="fas fa-search"></i>
+	</div>
+</div>
+<script>
+	  let select	 = document.getElementById("select");
+    let list = document.getElementById("list");
+		let selectText = document.getElementById("selectText");
+		let imputfield = document.getElementById("inputfield");
+		let options = document.getElementsByClassName("options");
+	select.onclick = function(){
+		    list.classList.toggle("open");
+				console.log('select')
+	}
+	for(options of options){
+        options.onclick = function(){
+					  selectText.innerHTML = this.innerHTML;
+						inputfield.placeholder = "" + selectText.innerHTML;
+						// QL start
+			  let li = event.target;
+			  console.log(li);
+			  let url = li.getAttribute("my-url");
+			  console.log(url);
+			 // store url in the ul#list 
+			 list.setAttribute("my-slected-url", url)
+			 // QL end
+				}
+	}
+	//QL
+	searchbtn.onclick = function(){
+		let url = list.getAttribute("my-slected-url");
+		console.log(url);
+		if(url !== ""){
+			window.location.href = url;
+		} // else url is "", then nothing to do
+	}
+
+async function loadData(){
+	let url = new URL("http://127.0.0.1:5501/The%20Simpsons.json")
+	let response = await fetch(url)
+	let data = await response.json();
+	console.log(data);
+
+
+}
+loadData();
+
+	</script>
+</body>
+</html>

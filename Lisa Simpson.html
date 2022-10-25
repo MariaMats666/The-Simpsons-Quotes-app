@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="MyStyleSheet.css">
+  <title>Lisa Simpson</title>
+</head>
+<body>
+  <body class="Main" >
+    <div class="center">
+    <h1>Lisa Simpson</h1>
+    <img src="/css/Lisa-Simpson.jpg" width="30%" style="margin-top:2rem" >
+    <div>
+    <div  class="form">
+      <div class="highlight" id="quoteDisplay" class="" >
+      </div>
+      <div style="margin-top:1rem"></div>
+      <button  class="searchbtn" onclick="newQuote()">New Quote</button>
+      <script src="javascript.js"></script>
+    
+    <script>
+      var quotes=[
+    '"BAAAAAART!"',
+    '"If anyone wants me, I ll be in my room."',
+    '"Quit it, Bart!"',
+    '"I am the lizard queen"',
+    "“Shut up, brain. I got friends now. I don't need you anymore. ”",
+    '"I believe they prefer to be called conjoined twins”',
+    "“Dad, those all come from the same animal.”",
+    '“You mean those leagues where parents push their kids into vicious competition to compensate for their own failed dreams of glory?”',
+    "Lay off guys! He's with me",
+    '“You think you know fear? Well, I ve seen them naked!”',
+    "What do you say to a boy to let him know you're not interested?",
+    '"I pick up books like you pick up beers"',
+    "You're gonna regret the day you were born",
+    "“Quit it! Quit it! Quit...you kids knock it off! Mama's watching her stories!”",
+    '“No, you don’t understand. I tried. I really tried.”',
+    "“If you're suggesting I stayed up all night trying to solve that childish puzzle... you're right.”",
+  ]
+  function newQuote(){
+  var randomNumber = Math.floor(Math.random() * (quotes.length));
+  
+  document.getElementById('quoteDisplay').innerHTML= quotes[randomNumber];
+  }
+  
+    </script>
+    </div>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="MyStyleSheet.css">
+  <title>Homer Simpson</title>
+  
+</head>
+
+
+<body class="Main">
+  <div class="center">
+  <h1>Homer Simpson Quotes</h1>
+  <img src="./css/Homer.jpg" width="40%" style="margin-top:2rem">
+  <div class="form">
+    <div class="highlight" id="quoteDisplay">
+    </div>
+    <div style="margin-top:2rem"></div>
+    <button  class="searchbtn" onclick="newQuote()">New Quote</button>
+    <script src="javascript.js" id="Texthighlight"></script>
+  <script>
+    var quotes=[
+  '"D Oh!"',
+  '"Operator! give me the number for 911" ',
+  '“Bart, a woman is like beer. They look good, they smell good, and you’d step over your own mother just to get one!”',
+  '“Don’t eat me. I have a wife and kids. Eat them.”',
+  '“I am so smart, I am so smart, s-m-r-t….I mean s-m-A-r-t!”',
+  '“Simpson! Homer Simpson! He’s the greatest guy in his-tor-y.From the, town of Springfield!He’s about to hit a chestnut tree! Waaaah!”',
+  '“You can have all the money in the world, but there’s one thing you will never have… a dinosaur.”',
+  '“If he’s so smart, how come he’s dead?”',
+  '“I like my beer cold… my TV loud… and my homosexuals flaming.”',
+  '“The problem in the world today is communication… too much communication.”',
+  '“To alcohol! The cause of, and solution to, all of life’s problems.”',
+  '"Why you little ..."',
+  '"Woo-Hoo!"','“Kids, you tried your best and you failed miserably. The lesson is,never try”','“In America first you get the sugar then you get the power then you get the women”',
+  'I ve got a problem.As soon as you stop this car,I m gonna hug you and kiss you and then I ll never be able to let you go!',
+]
+function newQuote(){
+var randomNumber = Math.floor(Math.random() * (quotes.length));
+
+document.getElementById('quoteDisplay').innerHTML= quotes[randomNumber];
+}
+
+  </script>
+
+    
+</div>
+    
+</body>
+</html>

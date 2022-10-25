@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="MyStyleSheet.css">
+  <title>Bart Simpson</title>
+</head>
+<body  class="Main" >
+  <div class="center">
+  <h1 >Bart Simpson</h1>
+  <img src="/css/Bart-Simpson.jpg" width="40%" style="margin-top:2rem">
+  <div class="form">
+    <div class="highlight" id="quoteDisplay">
+    </div>
+    <div style="margin-top:2rem"></div>
+    <button  class="searchbtn" onclick="newQuote()">New Quote</button>
+    <script  src="javascript.js"></script>
+  <script>
+    var quotes=[
+  '"Eat My Shorts !"',
+  "Don't Have a Cow, Man!",
+  '"¡Ay, caramba!"',
+  '"Get Bent."',
+  "I'm Bart Simpson, Who the Hell are You?",
+  '"Cowabunga!"',
+  "I Didn't Do It!",
+  '"Aw, Man!"',
+  '"Aw, Geez!"',
+  '"Whoa, mama!"',
+  '"Eep!"',
+  '"Ow! Quit it."',
+  '"Good grief!"',
+  '“Well, if you’re damned if you do, damned if you don’t.”',
+  '“No, you don’t understand. I tried. I really tried.”',
+  '“You’re the smart one, you figure it out.”',
+]
+function newQuote(){
+var randomNumber = Math.floor(Math.random() * (quotes.length));
+
+document.getElementById('quoteDisplay').innerHTML= quotes[randomNumber];
+}
+
+  </script>
+
+</div> 
+
+</body>
+</html>
